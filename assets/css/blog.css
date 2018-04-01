@@ -1,0 +1,19 @@
+.panel-default .panel-heading{
+	text-transform: uppercase;
+    color: #A6A6A6;
+    text-shadow: 1px 1px 1px #fff;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    font-size: 12px;
+
+}
+.header .panel-default {
+	border-radius:0px;
+}
+#notice {
+	color: #000000;
+	
+}
+.header .blog-content{
+	padding: 10px 23px 17px;
+}
