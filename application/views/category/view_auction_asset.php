@@ -152,7 +152,7 @@
   </div>
   </div>
 
-<script type="text/javascript">
+ <script type="text/javascript">
           function countdown() {
               var now=new Date();
               var eventDate=new Date("April 10,2018 00:00:00");
@@ -171,14 +171,30 @@
               minutes%=60;
               seconds%=60;
 
+              days=(days<10)?"0"+days:days;
               hours=(hours<10)?"0"+hours:hours;
               minutes=(minutes<10)?"0"+minutes:minutes;
               seconds=(seconds<10)?"0"+seconds:seconds;
 
-              document.getElementById('days').innerHTML=days;
-              document.getElementById('hours').innerHTML=hours;
-              document.getElementById('minutes').innerHTML=minutes;
-              document.getElementById('seconds').innerHTML=seconds;
+              if (days>=0&&hours>=0&&minutes>=0&&seconds>=0) {
+                document.getElementById('days').innerHTML=days;
+                document.getElementById('hours').innerHTML=hours;
+                document.getElementById('minutes').innerHTML=minutes;
+                document.getElementById('seconds').innerHTML=seconds;
+              }
+              else{
+                document.getElementById('days').innerHTML="00";
+                document.getElementById('hours').innerHTML="00";
+                document.getElementById('minutes').innerHTML="00";
+                document.getElementById('seconds').innerHTML="00";
+                document.getElementById('days').style.color='red';
+                document.getElementById('hours').style.color='red';
+                document.getElementById('minutes').style.color='red';
+                document.getElementById('seconds').style.color='red';
+
+              }
+
+              
 
           setTimeout(countdown,1000);
         }
